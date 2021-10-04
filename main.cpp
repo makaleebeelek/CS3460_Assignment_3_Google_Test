@@ -1,6 +1,10 @@
 // Assignment 3 Main File
 // Makalee Beelek
 
+#include "distributions.hpp"
+
+#include <iostream>
+
 int main()
 {
     auto uniform = generateUniformDistribution(100000, 0, 79, 40);

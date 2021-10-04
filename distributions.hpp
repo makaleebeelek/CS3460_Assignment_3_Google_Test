@@ -4,6 +4,10 @@
 // This is the header file for CS3460 Assignment 3
 
 // Given class definition for DistributionPair
+
+#include <iostream>
+#include <random>
+
 class DistributionPair
 {
   public:

@@ -1,3 +1,10 @@
+#include "distributions.hpp"
+
+#include <iomanip>
+#include <iostream>
+#include <random>
+#include <string>
+
 // Assignment 3 Distribution Functions
 // Makalee Beelek
 
@@ -25,7 +32,7 @@ std::vector<DistributionPair> generateUniformDistribution(std::uint32_t howMany,
     // set up the bins and define their range
     for (std::uint8_t i = 0; i < numberBins; i++)
     {
-        
+
         if (i == 0)
         {
             uniformDist.push_back(DistributionPair(min, i + 1));
@@ -251,12 +258,12 @@ void plotDistribution(std::string title, const std::vector<DistributionPair>& di
     for (int j = 0; j < distribution.size(); j++)
     {
         std::uint32_t numChar = static_cast<std::uint32_t>(ceil(charVal * distribution[j].count));
-        
+
         std::cout << "[" << std::setw(3) << distribution[j].minValue << ", " << std::setw(3) << distribution[j].maxValue << "] : ";
-        
+
         for (std::uint32_t k = 0; k < numChar; k++)
         {
-            std::cout << "*";        
+            std::cout << "*";
         }
 
         std::cout << std::endl;
